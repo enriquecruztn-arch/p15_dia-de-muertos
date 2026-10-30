@@ -1,5 +1,4 @@
 
-
 * {
     margin: 0;
     padding: 0;
@@ -17,38 +16,41 @@ body {
     text-align: center;
     min-height: 100vh;
     padding: 25px;
+    padding-top: 95px;
 }
 
 
 header {
-    background: linear-gradient(135deg, #ff6b00, #c2185b);
-    padding: 35px 20px;
-    border-radius: 20px;
+    background: linear-gradient(135deg, #ff6b00, #e63946, #c2185b);
+    padding: 40px 20px;
+    border-radius: 25px;
     border: 3px solid #ffd166;
-    box-shadow: 0 0 25px #ff8c42;
-    margin-bottom: 20px;
+    box-shadow: 0 0 20px #ff8c42, 0 0 40px rgba(255, 107, 0, 0.4);
+    margin-bottom: 25px;
+    animation: aparecer 1s ease;
 }
 
 h1 {
-    font-size: 45px;
+    font-size: 48px;
     color: #fff4b8;
-    text-shadow: 3px 3px 5px #5b1030;
+    text-shadow: 3px 3px 5px #5b1030, 0 0 15px #ffb347;
     margin-bottom: 15px;
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 22px;
     color: white;
     line-height: 1.5;
 }
 
 
 .menu {
-    background: linear-gradient(135deg, #581845, #83246a);
+    background: linear-gradient(135deg, #581845, #83165d, #4b1248);
     border: 2px solid #ffd166;
-    border-radius: 15px;
-    padding: 15px;
-    margin-bottom: 30px;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+    padding: 18px;
+    margin-bottom: 0;
 
     display: flex;
     justify-content: center;
@@ -56,11 +58,13 @@ h2 {
     flex-wrap: wrap;
     gap: 12px;
 
-    position: sticky;
-    top: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
 
-    box-shadow: 0 0 15px #ff6b00;
+    box-shadow: 0 0 20px #ff6b00;
 }
 
 .menu a {
@@ -68,139 +72,133 @@ h2 {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 15px;
-    padding: 12px 16px;
-    border-radius: 10px;
+    font-size: 16px;
+    padding: 13px 20px;
+    border-radius: 15px;
     border: 1px solid #ffd166;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(255, 165, 0, 0.3);
 }
 
 .menu a:hover {
-    background: #ffd166;
+    background: linear-gradient(135deg, #ffd166, #ff8c42);
     color: #581845;
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #ff8c42;
+    transform: translateY(-5px) scale(1.06);
+    box-shadow: 0 0 15px #ff8c42, 0 0 25px #ff6b00;
 }
 
 
 main {
-    max-width: 700px;
-    margin: auto;
-    padding: 30px 20px;
-    background: rgba(255, 255, 255, 0.09);
+    max-width: 950px;
+    margin: 30px auto;
+    padding: 40px 25px;
+    background: rgba(255, 255, 255, 0.08);
     border: 2px solid #ffb347;
-    border-radius: 25px;
+    border-radius: 30px;
     box-shadow: 0 0 20px rgba(255, 165, 0, 0.3);
+    backdrop-filter: blur(8px);
+    animation: aparecer 1.2s ease;
 }
 
 
 img {
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
     border: 5px solid #ffb347;
-    border-radius: 20px;
-    box-shadow: 0 0 20px #ff6b00;
-    margin: 15px auto 25px;
-    display: block;
+    border-radius: 25px;
+    box-shadow: 0 0 15px #ff6b00, 0 0 30px rgba(255, 140, 66, 0.5);
+    margin: 20px 0;
+    transition: all 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 25px #ffd166, 0 0 45px #ff6b00;
 }
 
 
-main p,
-section p {
-    font-size: 19px;
+p {
+    font-size: 18px;
     line-height: 1.8;
-    margin: 15px 0;
+    margin: 20px auto;
+    max-width: 850px;
+}
+
+
+h3 {
+    color: #ffd166;
+    font-size: 30px;
+    margin: 25px 0 15px;
+    text-shadow: 0 0 10px #ff6b00;
+}
+
+
+ul, ol {
+    display: inline-block;
+    text-align: left;
+    line-height: 2;
+    font-size: 18px;
+    margin: 20px;
 }
 
 
 section {
-    max-width: 700px;
-    margin: 30px auto;
-    padding: 25px 20px;
-    background: rgba(255, 255, 255, 0.09);
+    background: rgba(255, 255, 255, 0.06);
     border: 2px solid #ffb347;
-    border-radius: 20px;
-    box-shadow: 0 0 15px rgba(255, 165, 0, 0.2);
-
-    scroll-margin-top: 130px;
+    border-radius: 25px;
+    padding: 30px;
+    margin: 25px auto;
+    transition: all 0.3s ease;
 }
 
-section h3 {
-    color: #ffd166;
-    font-size: 25px;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 5px #c2185b;
-}
-
-section h4 {
-    color: #ffb6c1;
-    font-size: 20px;
-    margin: 20px 0 10px;
-}
-
-ul {
-    text-align: left;
-    padding-left: 30px;
-}
-
-li {
-    font-size: 17px;
-    line-height: 1.8;
-    margin-bottom: 10px;
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255, 107, 0, 0.5);
+    border-color: #ffd166;
 }
 
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-th {
-    background: #c2185b;
-    color: white;
-    padding: 12px;
-    border: 1px solid #ffd166;
+ 
+::-webkit-scrollbar {
+    width: 12px;
 }
 
-td {
-    padding: 12px;
-    border: 1px solid #ffb347;
+::-webkit-scrollbar-track {
+    background: #210b35;
 }
 
-.fecha {
-    color: #ffd166;
-    font-size: 25px;
-    font-weight: bold;
-    text-shadow: 0 0 10px #ff6b00;
-}
-
-.frase {
-    color: #ffb6c1;
-    font-style: italic;
-    font-size: 18px;
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#ff6b00, #c2185b);
+    border-radius: 10px;
+    border: 2px solid #210b35;
 }
 
 
-footer {
-    margin-top: 30px;
-    padding: 20px;
-    color: #ffd166;
-    font-size: 17px;
-    border-top: 2px solid #ff9f1c;
-}
-
-footer a {
-    color: #ffb6c1;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-
-@media (max-width: 480px) {
-
+@media (max-width: 768px) {
     body {
         padding: 12px;
+        padding-top: 160px;
+    }
+
+    .menu {
+        padding: 10px;
+        gap: 7px;
+    }
+
+    .menu a {
+        font-size: 13px;
+        padding: 10px 12px;
     }
 
     h1 {
@@ -208,21 +206,33 @@ footer a {
     }
 
     h2 {
-        font-size: 17px;
+        font-size: 18px;
     }
 
     main {
         padding: 20px 12px;
     }
 
-    main p,
-    section p {
-        font-size: 17px;
+    p {
+        font-size: 16px;
     }
 
-    .menu {
-        padding: 10px;
-        gap: 8px;
+    h3 {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 20px 12px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        padding-top: 190px;
     }
 
     .menu a {
@@ -230,22 +240,12 @@ footer a {
         padding: 9px 10px;
     }
 
-    section {
-        padding: 18px 12px;
-        scroll-margin-top: 150px;
-    }
-
-    section h3 {
-        font-size: 21px;
-    }
-
-    table {
-        font-size: 13px;
-    }
-
-    th,
-    td {
-        padding: 7px;
+    h1 {
+        font-size: 27px;
     }
 }
-
+.menu {
+    position: static;
+    width: 100%;
+    margin: 20px auto;
+}
